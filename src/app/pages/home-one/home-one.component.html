@@ -1,0 +1,52 @@
+<div class="banner flex w-full flex-col">
+  <app-header class="mb-5"></app-header>
+  <div class="md:w-1/2 md:w-10/12 mx-auto flex-auto flex items-center">
+    <div class="md:w-1/2 px-10 md:px-0">
+      <h1 class="text-6xl text-white leading-none mb-8">Custom Trucking Solutions</h1>
+      <app-button class="text-white">
+        <span class="mr-4">Learn More</span> <img src="/assets/img/right-arrow-white.svg" class="inline-block">
+      </app-button>
+    </div>
+  </div>
+</div>
+<app-find-truck></app-find-truck>
+<div class="ng-custom-gray-light">
+  <section class="page-wrapper pt-24 pb-24">
+    <app-image-card>
+      <img src="./assets/img/home-1/image-1.png" alt="" image>
+      <div content class="p-16 h-full">
+        <h4 class="uppercase leading-none text-2xl mb-5 text-custom-info font-bold">Maintenance for your whole fleet</h4>
+        <p class="mb-5 text-base text-custom-info xl:leading-relaxed">Rush Truck Centers is committed to keeping your vehicles up and running. Our ASE-certified, highly-skilled technicians perform all levels of service work from standard preventative maintenance to warranty repairs to complete engine rebuilds.</p>
+        <a href="" class="uppercase text-custom-red"><span class="inline-block mr-5">Learn More</span> <img src="/assets/img/right-arrow-red.svg" class="inline-block"></a>
+      </div>
+    </app-image-card>
+  </section>
+  <section class="page-wrapper pb-24">
+    <app-image-card [reverse]="true">
+      <img src="./assets/img/home-1/image-2.png" alt="" image>
+      <div content class="p-16 flex items-center h-full">
+        <div>
+          <h4 class="uppercase leading-none text-2xl mb-5 text-custom-info font-bold">Explore the all new peterbilt 579</h4>
+          <p class="mb-5 text-base text-custom-info xl:leading-relaxed">
+            The All-New Model 579 from Peterbilt sets the standard for technology, fuel efficiency and driver comfort, while delivering superior performance and maximizing uptime.
+          </p>
+          <a href="" class="uppercase text-custom-red"><span class="inline-block mr-5">Learn More</span> <img src="/assets/img/right-arrow-red.svg" class="inline-block"></a>
+        </div>
+      </div>
+    </app-image-card>
+  </section>
+</div>
+
+<app-percentages></app-percentages>
+
+<section class="ng-custom-gray-light">
+  <app-testimonials></app-testimonials>
+</section>
+<section class="page-wrapper">
+  <app-get-in-touch></app-get-in-touch>
+</section>
+
+<div class="bg-custom-gray ">
+  <app-footer class="page-wrapper block"></app-footer>
+</div>
+

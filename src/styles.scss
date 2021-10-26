@@ -1,1 +1,84 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$rush-trucking-primary: mat.define-palette(mat.$gray-palette);
+$rush-trucking-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$rush-trucking-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$rush-trucking-theme: mat.define-light-theme((
+  color: (
+    primary: $rush-trucking-primary,
+    accent: $rush-trucking-accent,
+    warn: $rush-trucking-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($rush-trucking-theme);
+
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/css/tailwind.min.css";
+@import "./assets/scss/main";
+
+* {
+  outline: none;
+}
+html, body {
+  font-size: 16px;
+}
+
+:root {
+  --app-color-gold: rgba(203, 144, 0, 1);
+  --app-color-gray: #3F3F3F;
+  --app-color-gray-light: #f2f2f2;
+  --app-color-red: #EE1F29;
+  --app-color-info: #3F3F3F;
+}
+
+.page-wrapper {
+  width: 90%;
+  margin: auto;
+  @media screen and (min-width: 1024px) {
+    width: 80%;
+  }
+}
+
+.bg-custom-gray {
+  background-color: var(--app-color-gray);
+}
+.ng-custom-gray-light {
+  background-color: var(--app-color-gray-light);
+}
+
+
+.text-custom-red {
+  color: var(--app-color-red);
+}
+
+.text-custom-gold {
+  color: var(--app-color-gold);
+}
+
+.text-custom-info {
+  color: var(--app-color-info)
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

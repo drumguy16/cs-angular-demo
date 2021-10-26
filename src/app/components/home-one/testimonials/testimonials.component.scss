@@ -1,0 +1,21 @@
+::ng-deep {
+  .testimonial-icon {
+    background: var(--app-color-red);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+    width: 50px !important;
+    height: 50px !important;
+
+    img {
+      width: 30px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

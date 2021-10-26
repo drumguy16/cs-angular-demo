@@ -1,0 +1,10 @@
+::ng-deep {
+  .banner {
+    min-height: 90vh;
+    background-image: url("../../../assets/img/bg-home-1-desktop.png");
+    background-position: center right;
+    @media screen and (min-width: 1024px) {
+      background-position: center;
+    }
+  }
+}
