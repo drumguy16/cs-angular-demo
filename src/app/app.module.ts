@@ -14,6 +14,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatIconModule } from "@angular/material/icon";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import {MatRadioModule} from '@angular/material/radio';
 
 
 import { ImageCardComponent } from './components/ui/image-card/image-card.component';
@@ -21,6 +22,10 @@ import { PercentagesComponent } from './components/home-one/percentages/percenta
 import { TestimonialsComponent } from './components/home-one/testimonials/testimonials.component';
 import { GetInTouchComponent } from './components/home-one/get-in-touch/get-in-touch.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FindTrackTwoComponent } from './components/home-two/find-track-two/find-track-two.component';
+import { BrandsComponent } from './components/home-two/brands/brands.component';
+import { SimpleCardComponent } from './components/ui/simple-card/simple-card.component';
+import { ServicesComponent } from './components/home-two/services/services.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,11 @@ import { FooterComponent } from './components/footer/footer.component';
     PercentagesComponent,
     TestimonialsComponent,
     GetInTouchComponent,
-    FooterComponent
+    FooterComponent,
+    FindTrackTwoComponent,
+    BrandsComponent,
+    SimpleCardComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -44,6 +53,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

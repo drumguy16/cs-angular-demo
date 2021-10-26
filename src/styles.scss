@@ -9,6 +9,7 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -53,7 +54,7 @@ html, body {
 }
 
 .page-wrapper {
-  width: 90%;
+  width: 85%;
   margin: auto;
   @media screen and (min-width: 1024px) {
     width: 80%;
@@ -63,7 +64,7 @@ html, body {
 .bg-custom-gray {
   background-color: var(--app-color-gray);
 }
-.ng-custom-gray-light {
+.bg-custom-gray-light {
   background-color: var(--app-color-gray-light);
 }
 
@@ -82,3 +83,24 @@ html, body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: var(--app-color-gold) !important;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: var(--app-color-gold) !important;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple {
+  background-color: var(--app-color-gold) !important;
+}
+
+.mat-radio-button.mat-accent.mat-accent:active .mat-ripple-element {
+  background-color: var(--app-color-gold) !important;
+}
+
+.mat-radio-outer-circle {
+  border-color: white !important;
+}

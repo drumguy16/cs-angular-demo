@@ -1,1 +1,40 @@
-<p>home-two works!</p>
+<div class="banner flex w-full flex-col">
+  <app-header class="mb-5"></app-header>
+</div>
+<section class="bg-custom-gray">
+  <app-find-track-two class="page-wrapper block"></app-find-track-two>
+</section>
+<section class="page-wrapper pt-16 pb-16">
+  <app-image-card>
+    <div image>
+      <img src="/assets/img/home-2/image-1.png" class="w-full" alt="">
+      <div style="background-image: url(/assets/img/home-2/image-1.png)" class="absolute top-0 left-0 bottom-0 right-0 bg-cover bg-center md:block hidden" >
+      </div>
+    </div>
+    <div class="p-16 h-full" content>
+      <h4 class="uppercase leading-none text-2xl mb-5 text-custom-info font-bold">why buy your truck at rush truck center?</h4>
+      <p class="mb-5 text-base text-custom-info xl:leading-relaxed">
+        Rush Truck Centers has thousands of new trucks in inventory across the country. We have the brands you know and trust, in a wide range of makes and models, specifications and applications.
+      </p>
+      <a href="" class="uppercase text-custom-red"><span class="inline-block mr-5">Learn More</span> <img src="/assets/img/right-arrow-red.svg" class="inline-block"></a>
+    </div>
+  </app-image-card>
+</section>
+
+<section class="pb-16 page-wrapper">
+  <app-brands></app-brands>
+</section>
+
+<section class="bg-custom-gray-light pb-10 md:pb-20">
+  <img src="/assets/img/home-2/image-2.png" alt="" class="md:hidden">
+  <img src="/assets/img/home-2/image-3.png" alt="" class="hidden md:block">
+  <app-services class="page-wrapper block"></app-services>
+</section>
+
+<section class="page-wrapper bg-white">
+  <app-get-in-touch></app-get-in-touch>
+</section>
+
+<div class="bg-custom-gray ">
+  <app-footer class="page-wrapper block"></app-footer>
+</div>

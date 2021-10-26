@@ -1,0 +1,11 @@
+<div>
+  <h4 class="uppercase leading-none text-2xl mb-10 text-custom-info font-bold">WE CARry the brands  you trust</h4>
+  <div class="text-center md:flex">
+    <div *ngFor="let brand of brands" class="inline-block md:flex-1">
+      <img
+        class="mb-5 mx-5 w-24 md:w-auto"
+        [src]="'/assets/img/home-2/brand-'+ brand +'.png'" alt="">
+    </div>
+
+  </div>
+</div>
