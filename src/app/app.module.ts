@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ContentstackModule } from '../modules/contentstack/contentstack.module';
+import { BannerComponent } from './components/banner/banner.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -10,12 +11,11 @@ import { ButtonComponent } from './components/ui/button/button.component';
 import { FindTruckComponent } from './components/home-one/find-truck/find-truck.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatSelectModule } from "@angular/material/select";
-import { MatIconModule } from "@angular/material/icon";
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatInputModule } from "@angular/material/input";
-import {MatRadioModule} from '@angular/material/radio';
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { ImageCardComponent } from './components/ui/image-card/image-card.component';
 import { PercentagesComponent } from './components/home-one/percentages/percentages.component';
@@ -27,6 +27,12 @@ import { BrandsComponent } from './components/home-two/brands/brands.component';
 import { SimpleCardComponent } from './components/ui/simple-card/simple-card.component';
 import { ServicesComponent } from './components/home-two/services/services.component';
 
+const Config = {
+  api_key: 'blt891e2773af64cd97',
+  delivery_token: 'bltcs96732760ab3348804f1be82312345789',
+  environment: 'local',
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +40,7 @@ import { ServicesComponent } from './components/home-two/services/services.compo
     HomeOneComponent,
     HomeTwoComponent,
     ButtonComponent,
+    BannerComponent,
     FindTruckComponent,
     ImageCardComponent,
     PercentagesComponent,
@@ -43,7 +50,7 @@ import { ServicesComponent } from './components/home-two/services/services.compo
     FindTrackTwoComponent,
     BrandsComponent,
     SimpleCardComponent,
-    ServicesComponent
+    ServicesComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -54,8 +61,9 @@ import { ServicesComponent } from './components/home-two/services/services.compo
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
+    ContentstackModule.initializeApp(Config),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
